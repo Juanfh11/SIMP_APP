@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TotalActivity"
+        android:background="@color/orange_pastel"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/image_cheetos"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/chester_cheetos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="Nombre del alumno"
+            android:textColor="@color/black"
+            android:fontFamily="@font/luckiest_guy"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_cheetos" />
+
+
+        <TextView
+            android:id="@+id/total_foults_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/luckiest_guy"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_foults_button"
+            tools:text="Tiene un total de X faltas" />
+
+        <RadioGroup
+            android:id="@+id/grupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/name_total"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/name_total"
+            app:layout_constraintTop_toBottomOf="@+id/name_total">
+
+            <RadioButton
+                android:id="@+id/injustificada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/luckiest_guy"
+                android:padding="6dp"
+                android:text="@string/unjustified" />
+
+            <RadioButton
+                android:id="@+id/justificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/luckiest_guy"
+                android:padding="6dp"
+                android:text="@string/justified" />
+
+            <RadioButton
+                android:id="@+id/retraso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/luckiest_guy"
+                android:padding="6dp"
+                android:text="@string/delay" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/show_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show totals"
+            android:fontFamily="@font/luckiest_guy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/save_foults_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/luckiest_guy"
+            android:text="@string/save_foults_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/grupo"
+            app:layout_constraintTop_toBottomOf="@+id/grupo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
